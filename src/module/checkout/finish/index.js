@@ -7,6 +7,11 @@ import './style.scss';
 const Finish = ({ onChangeActiveSection = () => {} }) => {
   const shipmentName = useCheckoutStore((state) => state.shipmentName);
   const shipmentEst = useCheckoutStore((state) => state.shipmentEst);
+  const reset = useCheckoutStore((state) => state.reset);
+  const onClickBacktoHome = () => {
+    onChangeActiveSection(1);
+    reset();
+  };
 
   return (
     <div className="finish-container">
@@ -16,9 +21,7 @@ const Finish = ({ onChangeActiveSection = () => {} }) => {
         <p className="order-shipment">
           Your order today will be delivered {shipmentEst} with {shipmentName}
         </p>
-        <button
-          className="homepage-button"
-          onClick={() => onChangeActiveSection(1)}>
+        <button className="homepage-button" onClick={onClickBacktoHome}>
           <img src="/img/arrow-left.svg" alt="back to homepage" />
           <p>Go To Homepage</p>
         </button>

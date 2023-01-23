@@ -1,3 +1,4 @@
+import { thousandSeparator } from 'utils';
 import './style.scss';
 
 const ShipmentButton = ({
@@ -14,7 +15,12 @@ const ShipmentButton = ({
       }`}
       onClick={() => onClick(name, price, est)}>
       <p className="shipment-button-name">{name}</p>
-      {price ? <p className="shipment-button-price">{price}</p> : null}
+      {price ? (
+        <p className="shipment-button-price">
+          {thousandSeparator(price)}
+          {name === 'e-Wallet' ? ' left' : ''}{' '}
+        </p>
+      ) : null}
     </button>
   );
 };

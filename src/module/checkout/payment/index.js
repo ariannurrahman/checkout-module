@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 import { Title } from 'components';
 import { useCheckoutStore } from 'store';
-import { thousandSeparator } from 'utils';
 import { ShipmentButton } from './shipment-button';
 
 import './style.scss';
@@ -24,18 +23,7 @@ const SHIPMENT_DICT = [
     est: '1 Day',
   },
 ];
-const PAYMENT_DICT = [
-  {
-    name: 'e-Wallet',
-    price: thousandSeparator(1500000),
-  },
-  {
-    name: 'Bank Transfer',
-  },
-  {
-    name: 'Virtual Account',
-  },
-];
+
 const Payment = ({ onChangeActiveSection }) => {
   const formOnLocalStorage = JSON.parse(
     localStorage.getItem('jakmal-checkout')
@@ -45,9 +33,23 @@ const Payment = ({ onChangeActiveSection }) => {
 
   const setPayment = useCheckoutStore((state) => state.setPayment);
   const setShipment = useCheckoutStore((state) => state.setShipment);
+  const walletValue = useCheckoutStore((state) => state.walletValue);
 
   const [selectedShipment, setSelectedShipment] = useState(_shipmentName);
   const [selectedPayment, setSelectedPayment] = useState(_paymentMethod);
+
+  const PAYMENT_DICT = [
+    {
+      name: 'e-Wallet',
+      price: walletValue,
+    },
+    {
+      name: 'Bank Transfer',
+    },
+    {
+      name: 'Virtual Account',
+    },
+  ];
 
   const onClickShipment = (name, price, est) => {
     setSelectedShipment(name);

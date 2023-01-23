@@ -12,11 +12,23 @@ const Summary = ({ activeSection = 0, onChangeActiveSection = () => {} }) => {
   const shipmentName = useCheckoutStore((state) => state.shipmentName);
   const paymentMethod = useCheckoutStore((state) => state.paymentMethod);
   const shipmentEst = useCheckoutStore((state) => state.shipmentEst);
-
+  const payWithWallet = useCheckoutStore((state) => state.payWithWallet);
+  const walletValue = useCheckoutStore((state) => state.walletValue);
   const dropShipFee = isDropship ? DROPSHIP_FEE : 0;
 
-  const onClickToFinish = () => {
-    onChangeActiveSection(3);
+  const onClickPay = () => {
+    const total = totalPrice + shipmentPrice + dropShipFee;
+
+    if (paymentMethod === 'e-Wallet') {
+      if (walletValue < total) {
+        alert('Top up your wallet / choose different payment method');
+      } else {
+        payWithWallet(total);
+        onChangeActiveSection(3);
+      }
+    } else {
+      onChangeActiveSection(3);
+    }
   };
 
   return (
@@ -76,7 +88,7 @@ const Summary = ({ activeSection = 0, onChangeActiveSection = () => {} }) => {
         ) : activeSection === 2 ? (
           <button
             disabled={!paymentMethod || !shipmentName}
-            onClick={onClickToFinish}
+            onClick={onClickPay}
             className="submit-button">
             {!paymentMethod
               ? 'Choose payment method'
