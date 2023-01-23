@@ -1,0 +1,39 @@
+.shipment-button,
+.shipment-button-active {
+  width: 180px;
+  height: 60px;
+  padding: 8px 8px;
+  cursor: pointer;
+  &-name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    text-align: left;
+  }
+
+  &-price {
+    margin-top: 3px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    text-align: left;
+  }
+}
+
+.shipment-button {
+  background-color: white;
+  border: 1px solid #cccccc;
+}
+
+.shipment-button-active {
+  background-color: rgb(232, 251, 242);
+  border: 2px solid #1bd97b;
+}

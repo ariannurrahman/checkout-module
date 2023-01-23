@@ -1,0 +1,114 @@
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .summary-title-wrapper {
+    margin-top: 24px;
+  }
+  .summary-title-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #ff8a00;
+  }
+
+  .sub-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    margin: 10px 0;
+  }
+
+  .sub-title-2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #000000;
+  }
+
+  .shipment-payment-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1bd97b;
+    margin-top: 5px;
+  }
+
+  .summary-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    .price-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      .price {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: right;
+        color: #000000;
+      }
+
+      .total-price {
+        margin: 20px 0;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+
+        color: #ff8a00;
+      }
+    }
+
+    .submit-button {
+      cursor: pointer;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      color: #ffffff;
+      display: block;
+      color: white;
+      width: 100%;
+      height: 40px;
+      background-color: rgb(220, 120, 33);
+      border: none;
+      font-size: 14px;
+      align-self: center;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .summary-container {
+    height: 100%;
+    justify-content: space-between;
+    .total-purchased {
+      text-align: left;
+    }
+  }
+}

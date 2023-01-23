@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url(../fonts/Roboto-Medium.ttf) format('opentype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'),
+    url(../fonts/Montserrat-Medium.ttf) format('opentype');
+}
+
+.roboto {
+  font-family: 'Roboto';
+}

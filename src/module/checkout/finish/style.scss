@@ -1,0 +1,69 @@
+.finish-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  .finish-wrapper {
+    width: 240px;
+    p {
+      text-align: left;
+    }
+    .order-id {
+      margin-top: 26px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: #000000;
+    }
+    .order-shipment {
+      margin-top: 10px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: #000000;
+      mix-blend-mode: normal;
+      opacity: 0.6;
+    }
+    .homepage-button {
+      margin-top: 60px;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      cursor: pointer;
+      img {
+        margin-right: 10px;
+        width: 12px;
+        height: 12px;
+        object-fit: contain;
+      }
+      p {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+
+        color: #000000;
+
+        mix-blend-mode: normal;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .finish-container {
+    .finish-wrapper {
+      width: 400px;
+    }
+  }
+}

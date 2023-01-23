@@ -1,0 +1,36 @@
+// .form {
+//   display: flex;
+//   flex-direction: column;
+//   position: relative;
+//   gap: 20px;
+//   label {
+//     color: rgb(153, 153, 153);
+//     position: absolute;
+//     top: 20px;
+//     left: 20px;
+//     color: #999;
+//     transition: 0.5s;
+//     pointer-events: none;
+//   }
+//   label.active {
+//     transform: translateY(-10px);
+//     transition: 0.5s;
+//     color: crimson;
+//     font-weight: bold;
+//   }
+//   .input-form {
+//     width: 100%;
+//     border: 1px solid rgb(153, 153, 153);
+//     height: 60px;
+//     padding: 16px 20px 0 20px;
+//   }
+//   .text-input-area {
+//     width: 100%;
+//     border: 1px solid rgb(153, 153, 153);
+//     min-height: 100px;
+//     padding: 32px 20px 0 20px;
+//   }
+//   .error-message {
+//     color: red;
+//   }
+// }
